@@ -1,0 +1,105 @@
+:root {
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    --background-gradient: linear-gradient(var(--soft-violet), var(--soft-blue));
+
+    --white: hsl(0, 0%, 100%);
+
+    --light-grayish: hsl(240, 5%, 91%);
+}
+
+body {
+    height: 100vh;
+    background: var(--background-gradient);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+.card-container {
+    background-color: var(--white);
+    padding: 0 24px 24px 24px;
+    border-radius: 16px;
+    width: 340px;
+    box-sizing: border-box
+}
+
+.img-container {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.img-principal {
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    top: -140px;
+    left: 30px;
+}
+
+.img-secondary {
+    position: relative;
+    left: 30px;
+}
+
+.tittle-principal {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 12px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.accordion-container {
+    border-bottom: 0.5px solid var(--light-grayish);
+}
+
+.accordion {
+    background: var(--white);
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 8px 0 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion::after {
+    content: url(./images/icon-arrow-down.svg);
+}
+
+.active {
+    font-weight: 700;
+}
+
+.active::after {
+    content: url(./images/icon-arrow-down.svg);
+    transform: rotate(180deg);
+}
+
+.panel {
+    display: none;
+    overflow: hidden;
+    padding-bottom: 8px;
+}
+
+.attribution {
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
